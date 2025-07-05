@@ -1,7 +1,4 @@
-from pathlib import Path
 
-# Final README content with simplified installation instructions and updated sections
-final_readme = """
 # 📈 Stochastic Models for Pricing WTI Futures
 
 This project implements four **closed-form stochastic models** to price **futures contracts on WTI crude oil**, with both in-sample estimation and out-of-sample evaluation. The models are applied on real data, and include error diagnostics and maturity-stratified performance analysis.
