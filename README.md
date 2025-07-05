@@ -12,16 +12,18 @@ This project implements four **closed-form stochastic models** to price **future
 
 ## 📚 Models Included
 
-| Model | Name | Description | Parameters |
-|-------|------|-------------|------------|
-| 1 | **Gabillon (GBM)** | Geometric Brownian Motion with convenience yield | 1 (δ) |
-| 2 | **Schwartz (OU)** | Mean-reverting log process | 3 (θ, α, σ) |
-| 3 | **Aba Oud & Goard – Bessel** | Modified square-root diffusion | 2 (a, σ) |
-| 4 | **Aba Oud & Goard – CIR** | Modified CIR with ¾ volatility | 3 (a, b, σ) |
+| Model | Description | SDE | Parameters |
+|-------|-------------|-----|------------|
+| **1. GBM (Gabillon)** | Geometric Brownian Motion | \\( dS = \\mu S_t dt + \\sigma S_t dW_t \\) | \\( \\delta \\) |
+| **2. OU (Schwartz)** | Mean-reverting log process | \\( dS = \\theta(\\mu - \\ln S) dt + \\sigma S dW_t \\) | \\( \\theta, \\alpha, \\sigma \\) |
+| **3. Modified Bessel (Aba Oud & Goard)** | Square-root model with nonlinear volatility | \\( dS = a\\sqrt{S}dt + \\sigma S^{3/4} dW_t \\) | \\( a, \\sigma \\) |
+| **4. Modified CIR (Aba Oud & Goard)** | CIR-style drift with 3/4 volatility | \\( dS = (a\\sqrt{S} + bS)dt + \\sigma S^{3/4} dW_t \\) | \\( a, b, \\sigma \\) |
 
-Each model has a **closed-form futures price formula** and is estimated using least-squares minimization against observed prices.
+Each model provides an **analytical expression** for futures prices, assuming no-arbitrage and deterministic interest rates.
 
 ---
+
+
 
 ## 📊 Dataset Summary
 
