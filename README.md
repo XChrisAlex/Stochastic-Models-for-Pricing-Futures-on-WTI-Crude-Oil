@@ -1,6 +1,7 @@
-# Stochastic-Models-for-Pricing-Futures-on-WTI-Crude-Oil
-This repository contains the empirical study (made in python) of four stochastic models for WTI crude oil futures pricing. The goal is to estimate model parameters and evaluate predictive performance using real market data.
+from pathlib import Path
 
+# Final README content with simplified installation instructions and updated sections
+final_readme = """
 # 📈 Stochastic Models for Pricing WTI Futures
 
 This project implements four **closed-form stochastic models** to price **futures contracts on WTI crude oil**, with both in-sample estimation and out-of-sample evaluation. The models are applied on real data, and include error diagnostics and maturity-stratified performance analysis.
@@ -21,8 +22,7 @@ This project implements four **closed-form stochastic models** to price **future
 
 Each model provides an **analytical expression** for futures prices under no-arbitrage and deterministic interest rate assumptions.
 
-
-
+---
 
 ## 📊 Dataset Summary
 
@@ -40,29 +40,14 @@ Each model provides an **analytical expression** for futures prices under no-arb
 
 ---
 
+## 🛠️ Installation
 
+Make sure you have Python (version ≥ 3.8) installed.  
+To install all required libraries, simply run:
 
-### ****** How to Run ******
+```bash
+pip install -r requirements.txt
 
-At line 29, set model choise to your preffered model (1-4) or type "all" if you want to run all models at once.
-Then, python main.py
-
-
-### ****** Project Stracture ******
-├── main.py
-│   → Main script to run model estimation, evaluation, and plotting
-├── preprocessing.py
-│   → Functions to load, align, clean, and flatten futures, spot, and rate data
-├── models.py
-│   → Contains all four closed-form pricing models and parameter estimation logic
-├── plotting.py
-│   → Functions to visualize in-sample fits, daily RMSE, and model comparisons
-├── metrics.py
-│   → Functions for residual analysis grouped by maturity buckets
-├── DATASETORG.xlsx
-│   → In-sample dataset with 12 futures contracts, spot prices, and interest rates
-├── DATASETORG_OFS.xlsx
-│   → Out-of-sample dataset for evaluation on new market data
 
 
 
