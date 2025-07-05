@@ -14,14 +14,12 @@ This project implements four **closed-form stochastic models** to price **future
 
 | Model | Description | SDE | Parameters |
 |-------|-------------|-----|------------|
-| **1. GBM (Gabillon)** | Geometric Brownian Motion | \( dS = \mu S_t dt + \sigma S_t dW_t \) | \( \delta \) |
-| **2. OU (Schwartz)** | Mean-reverting log process | \( dS = \theta(\mu - \ln S) dt + \sigma S dW_t \) | \( \theta, \alpha, \sigma \) |
-| **3. Modified Bessel (Aba Oud & Goard)** | Square-root model with nonlinear volatility | \( dS = a\sqrt{S}dt + \sigma S^{3/4} dW_t \) | \( a, \sigma \) |
-| **4. Modified CIR (Aba Oud & Goard)** | CIR-style drift with 3/4 volatility | \( dS = (a\sqrt{S} + bS)dt + \sigma S^{3/4} dW_t \) | \( a, b, \sigma \) |
+| 1. GBM (Gabillon) | Geometric Brownian Motion | dS = μ·Sₜ·dt + σ·Sₜ·dWₜ | δ |
+| 2. OU (Schwartz) | Mean-reverting log process | dS = θ(μ − ln S)·dt + σ·S·dWₜ | θ, α, σ |
+| 3. Modified Bessel | Square-root with nonlinear vol | dS = a·√S·dt + σ·S^(3/4)·dWₜ | a, σ |
+| 4. Modified CIR | CIR drift with ¾ volatility | dS = (a·√S + b·S)·dt + σ·S^(3/4)·dWₜ | a, b, σ |
 
-Each model provides an **analytical expression** for futures prices, assuming no-arbitrage and deterministic interest rates.
-
----
+Each model provides an **analytical expression** for futures prices under no-arbitrage and deterministic interest rate assumptions.
 
 
 
